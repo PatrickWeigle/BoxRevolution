@@ -1,0 +1,33 @@
+package game;
+import java.awt.event.KeyEvent;
+
+import jplay.*;
+public class Login {
+	private Window janela;
+	private Scene cena;
+	
+	public Login(Window window){
+		janela = window;
+		cena = new Scene();
+		cena.loadFromFile(URL.scenario("login.scn"));	
+		
+		
+		run();
+	}
+	private void run() {
+		// TODO Auto-generated method stub
+		Keyboard input = janela.getKeyboard();
+		while(true){
+			cena.draw();			
+			janela.update();
+			
+			if(input.keyDown(KeyEvent.VK_ENTER)){
+				new Cenario(janela);
+				}else if (input.keyDown(KeyEvent.VK_ESCAPE)){
+				System.exit(0);	
+				}
+		}
+		
+	}
+
+}

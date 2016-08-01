@@ -1,0 +1,54 @@
+package game;
+
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Image;
+import java.awt.Label;
+
+import javax.swing.*;
+
+
+import jplay.GameImage;
+import jplay.URL;
+import jplay.Window;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Window janela = new Window(640, 480);
+		//janela.setOpacity(0f);
+		
+		//janela.setUndecorated(true);
+		janela.setBackground(new Color(0, 255, 0, 0));
+		janela.setContentPane(new ContentPane());
+		janela.getContentPane().setBackground(Color.BLACK);
+		janela.setLayout(new BorderLayout());
+		
+		
+		GameImage menu = new GameImage(URL.sprite("Menu_Box.png"));
+		 JPanel panel = new JPanel(new BorderLayout());
+	        //painel_imagem.setOpaque(true);
+		 Image i = new ImageIcon(URL.sprite("Menu_Box.png")).getImage();
+		 panel.add(new JDesktopPane());
+		 //janela.getContentPane().add(panel);
+
+		janela.add(panel);
+		janela.setVisible(true);
+		
+		
+		
+		
+		
+		//"src//resources/sprites/Menu_Box.png"
+		//public DisplayMode[] getCompatibleDisplayMode();
+		
+		while(true){
+			menu.draw();
+			janela.update();
+		}
+
+	}
+
+}

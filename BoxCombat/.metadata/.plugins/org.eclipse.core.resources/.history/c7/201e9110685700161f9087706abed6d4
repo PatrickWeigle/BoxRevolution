@@ -1,0 +1,28 @@
+package game;
+import jplay.*;
+public class Cenario {
+	private Window janela;
+	private Scene cena;
+	private Jogador jogador;
+	
+	public Cenario(Window window){
+		janela = window;
+		cena = new Scene();
+		cena.loadFromFile(URL.scenario("cenario.scn"));
+		jogador = new Jogador(1159, 486);
+		
+		run();
+	}
+
+	private void run() {
+		// TODO Auto-generated method stub
+		while(true){
+			cena.draw();
+			jogador.draw();
+			jogador.mover(janela);
+			janela.update();
+		}
+		
+	}
+
+}
