@@ -8,6 +8,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
+import com.sun.javafx.scene.control.skin.ColorPalette;
+
 import jplay.*;
 
 public class Login {
@@ -27,8 +29,11 @@ public class Login {
 		// TODO Auto-generated method stub
 		Keyboard input = janela.getKeyboard();
 		while (true) {
+			Color c = Color.getHSBColor(0.066695f, 0.434446f, 0.421636f);
 			cena.draw();
-			janela.drawText("BoxCombat", 100, 100, Color.BLACK, new Font("Arial", Font.PLAIN, 20));
+			janela.drawText("BoxCombat", 100, 250, c, new Font("Fipps", Font.PLAIN, 50));
+			janela.drawText("Enter - Start", 200, 300, c, new Font("Fipps", Font.PLAIN, 20));
+			janela.drawText("Esc - Exit", 230, 350, c, new Font("Fipps", Font.PLAIN, 20));
 			janela.update();
 		
 			if (input.keyDown(KeyEvent.VK_ENTER)) {
