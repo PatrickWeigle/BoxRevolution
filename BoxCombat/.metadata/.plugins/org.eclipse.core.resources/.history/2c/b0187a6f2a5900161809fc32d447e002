@@ -1,0 +1,60 @@
+package game;
+
+import javax.swing.JOptionPane;
+
+import jplay.Keyboard;
+import jplay.Sprite;
+import jplay.URL;
+import jplay.Window;
+
+public class Mira extends Sprite{
+	
+	private double velocity = 0.3;
+	private int direcao = 3;
+	private Keyboard input;
+	private boolean move = false;
+
+	public Mira(int x, int y) {
+		super(URL.sprite("mira completa recortada2.png"), 45);
+		this.x = x;
+		this.y = y;
+		this.setTotalDuration(700);
+		
+		
+		// TODO Auto-generated constructor stub
+	}
+	public void mover(Window janela){
+		if (input == null){
+			input = janela.getKeyboard();
+		}
+		//System.out.println(x+ " ,"+ y);
+		if (input.keyDown(Keyboard.UP_KEY)){
+			if (this.x > 27){
+				this.x -= velocity;
+			}
+			if (direcao != 1){
+				setSequence(0, 45);
+				direcao = 1;
+				
+			}
+			move = true;
+		}else if (input.keyDown(Keyboard.DOWN_KEY)){
+			if (this.x < janela.getWidth()-121){
+				this.x += velocity;
+			}
+			if (direcao != 2){
+				setSequence(45, 0);
+				direcao = 2;
+			}
+			move = true;
+		}
+		
+		if (move){
+			update();
+			move = false;
+		}
+		
+		//System.out.println(getCurrFrame()); -- mostrar o frame atual
+	}
+
+}

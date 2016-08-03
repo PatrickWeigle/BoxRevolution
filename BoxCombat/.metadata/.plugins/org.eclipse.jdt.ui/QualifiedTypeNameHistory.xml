@@ -16,7 +16,6 @@
 <fullyQualifiedTypeName name="jplay.Sprite"/>
 <fullyQualifiedTypeName name="jplay.URL"/>
 <fullyQualifiedTypeName name="game.Jogador"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="jplay.Window"/>
 <fullyQualifiedTypeName name="jplay.Keyboard"/>
 <fullyQualifiedTypeName name="jplay.Scene"/>
@@ -28,4 +27,6 @@
 <fullyQualifiedTypeName name="com.sun.javafx.scene.control.skin.ColorPalette"/>
 <fullyQualifiedTypeName name="javafx.scene.paint.Color"/>
 <fullyQualifiedTypeName name="com.sun.prism.paint.Color"/>
+<fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
