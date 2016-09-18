@@ -19,6 +19,7 @@ public class Forca extends Sprite {
 	private String fc = "";
 	private boolean volta = false;
 	private boolean reinicia = false;
+	private boolean fire = false;
 
 	public Forca() {
 		super(URL.sprite(null), 1);
@@ -29,7 +30,7 @@ public class Forca extends Sprite {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void carregar(Window janela) {
+	public boolean carregar(Window janela) {
 		if (input == null) {
 			input = janela.getKeyboard();
 			//input.setBehavior(Keyboard.SPACE_KEY, Keyboard.DETECT_EVERY_PRESS);
@@ -40,6 +41,7 @@ public class Forca extends Sprite {
 				fc = "";
 				volta = false;
 				reinicia = false;
+				fire = false;
 			}
 			if (direcao < 3 || direcao > 8) {
 
@@ -73,6 +75,7 @@ public class Forca extends Sprite {
 
 		} else {
 			 reinicia = true;
+			 fire = true;
 		}
 
 		if (move) {
@@ -86,6 +89,7 @@ public class Forca extends Sprite {
 		janela.drawText(fc, 350, 660, c, new Font("Fipps", Font.PLAIN, 20));
 
 		// System.out.println(getCurrFrame()); -- mostrar o frame atual
+		return fire;
 	}
 
 }

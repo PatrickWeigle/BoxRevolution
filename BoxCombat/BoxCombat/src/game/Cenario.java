@@ -10,6 +10,9 @@ public class Cenario {
 	private Jogador jogador;
 	private Mira mira;
 	private Forca forca;
+	private Vento vento;
+	//private Projetil projetil;
+	private Chat chat;
 	
 	public Cenario(Window window){
 		janela = window;
@@ -18,6 +21,9 @@ public class Cenario {
 		jogador = new Jogador(1159, 520);
 		mira = new Mira(1159, 450);
 		forca = new Forca();
+		vento = new Vento();
+		//projetil = new Projetil(20, 520);
+		chat = new Chat();
 		
 		run();
 	}
@@ -26,12 +32,19 @@ public class Cenario {
 		// TODO Auto-generated method stub
 		Keyboard input = janela.getKeyboard();
 		while(true){
+			chat.draw();
 			cena.draw();
 			jogador.draw();
 			mira.draw();
 			jogador.mover(janela);
 			mira.mover(janela, (int)jogador.getX()-90);
 			forca.draw();
+			vento.draw();
+			vento.ventar(janela);
+			//projetil.draw();
+			
+			chat.printar(janela);
+			//projetil.atirar(janela, forca.carregar(janela),(int)jogador.getX(),(int)jogador.getY());
 			forca.carregar(janela);
 			Color c = Color.getHSBColor(5f, 0.6f, 0.3f);
 			//janela.drawText("Jogador-1", 50, 690, c, new Font("Fipps", Font.PLAIN, 20));

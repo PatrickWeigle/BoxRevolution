@@ -32,4 +32,6 @@
 <fullyQualifiedTypeName name="java.awt.event.KeyEvent"/>
 <fullyQualifiedTypeName name="jplay.Keyboard"/>
 <fullyQualifiedTypeName name="com.sun.glass.events.KeyEvent"/>
+<fullyQualifiedTypeName name="game.Vento"/>
+<fullyQualifiedTypeName name="game.Projetil"/>
 </qualifiedTypeNameHistroy>

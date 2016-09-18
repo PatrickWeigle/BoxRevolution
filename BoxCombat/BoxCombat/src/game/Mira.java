@@ -63,7 +63,7 @@ public class Mira extends Sprite{
 		janela.drawText("Angulo: "+getCurrFrame()*2, 550, 690, c, new Font("Fipps", Font.PLAIN, 20));
 		//janela.drawText("Força: ", 240, 660, c, new Font("Fipps", Font.PLAIN, 20));
 		//janela.drawText(fc, 350, 660, c, new Font("Fipps", Font.PLAIN, 20));
-		janela.drawText("Vento: ", 560, 70, c, new Font("Fipps", Font.PLAIN, 20));
+		
 		//System.out.println(getCurrFrame()); -- mostrar o frame atual
 	}
 
