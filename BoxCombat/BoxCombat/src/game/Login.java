@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.sun.javafx.scene.control.skin.ColorPalette;
+//import com.sun.javafx.scene.control.skin.ColorPalette;
 
 import jplay.*;
 

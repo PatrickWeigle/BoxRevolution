@@ -30,7 +30,9 @@ public class Chat extends Sprite {
 		}
 		// System.out.println(x+ " ,"+ y);
 		if (input.keyDown(Keyboard.A_KEY) ) {
-			JOptionPane.showMessageDialog(null,"Chat");
+			ChatMSN ch = new ChatMSN();
+			ch.setVisible(true);
+			
 		}
 
 		if (move) {

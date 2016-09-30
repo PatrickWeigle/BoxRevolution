@@ -14,7 +14,7 @@ public class Cliente {
     public String enviaMSG(String msgR) {
         //lê o ip e a porta do servidor
         //ipServidor = JOptionPane.showInputDialog(null, "Insira o IP do servidor","192.168.25.34");
-        ipServidor = "192.168.14.11";
+        ipServidor = "192.168.2.232";
         //porta      = Integer.parseInt(JOptionPane.showInputDialog(null, "Insira a porta do servidor","7000"));
         porta = 7000;
         //Declaro o Socket cliente
